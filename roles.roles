@@ -1,0 +1,6 @@
+[
+    {
+        "name": "http-bin",
+        "description": "Permission to call the httpbin.org upstream exposed by sample-remote-native-app through the Dirigible native-app proxy at /services/native-apps-proxy/v1/http-bin/."
+    }
+]
