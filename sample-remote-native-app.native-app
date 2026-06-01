@@ -1,0 +1,15 @@
+{
+  "name": "sample-remote-native-app",
+  "description": "Sample remote native application. Reverse-proxies the public httpbin.org service through Dirigible under /services/native-apps-proxy/v1/http-bin/. The whole upstream root is exposed and gated by the 'http-bin' role.",
+  "basePath": "http-bin",
+  "type": "remote",
+  "config": {
+    "url": "https://httpbin.org",
+    "security": {
+      "authentication": null,
+      "exposedPaths": [
+        { "path": "/", "scopes": ["http-bin"] }
+      ]
+    }
+  }
+}
