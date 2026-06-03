@@ -20,7 +20,7 @@ covers the `local` variant (a Node.js process Dirigible spawns and supervises).
 | ----------------------------------- | ------------------------------------------------------------------------ |
 | `project.json`                      | Identifies the project to Dirigible (`guid: sample-remote-native-app`).  |
 | `roles.roles`                       | Declares the `http-bin` role (synchronized into `DIRIGIBLE_SECURITY_ROLES`). |
-| `sample-remote-native-app.native-app` | The native-app artefact — kind `remote`, upstream `https://httpbin.org`, basePath `http-bin`, root exposed under the `http-bin` role. |
+| `sample-remote-native-app.nativeapp` | The native-app artefact — kind `remote`, upstream `https://httpbin.org`, basePath `http-bin`, root exposed under the `http-bin` role. |
 
 ### The native-app artefact
 
@@ -99,7 +99,7 @@ to `https://httpbin.org`. Without the `http-bin` role the proxy answers with
 Deleting any of the three files and republishing the project tells the
 synchronizers to clean up:
 
-- Removing `sample-remote-native-app.native-app` — the artefact row is deleted
+- Removing `sample-remote-native-app.nativeapp` — the artefact row is deleted
   and the basePath is unregistered. Requests to the proxy return **404**.
 - Removing `roles.roles` — the `http-bin` role row is deleted; user
   assignments referencing it are cascade-dropped via the database FK, so the
